@@ -7,7 +7,7 @@ class Person:
         self.last_name = last_name
 
 
-def convert_list_to_string(people: list[Person]) -> str | None:
+def convert_list_to_string(people: list[Person]) -> str:
     """
     Convert a list of Person objects to a string representation.
 
@@ -19,7 +19,7 @@ def convert_list_to_string(people: list[Person]) -> str | None:
     """
 
     if len(people) == 0:
-        return None
+        return "No people available."
 
     return ", ".join(f"{person.first_name} {person.last_name}" for person in people)
 
